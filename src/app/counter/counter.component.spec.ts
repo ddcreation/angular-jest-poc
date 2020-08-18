@@ -22,16 +22,21 @@ describe('CounterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('counter should be 0', () => {
+  // Test property init
+  it('counter initial state', () => {
+    expect(component.count).toBe(0);
+  });
+
+  // Test view init
+  it('view initial state', () => {
     expect(component.count).toBe(0);
 
-    // Test view init
-    const compiled = fixture.debugElement.nativeElement;
-    const button = compiled.querySelector('button');
+    const button = fixture.debugElement.nativeElement.querySelector('button');
     expect(button.textContent).toBe('0');
   });
 
-  it('counter should increment', () => {
+  // Test method
+  it('increment is working', () => {
     expect(component.count).toBe(0);
 
     // Test property changes
@@ -43,5 +48,13 @@ describe('CounterComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     const button = compiled.querySelector('button');
     expect(button.textContent).toBe('1');
+  });
+
+  it('button click launch increment', () => {
+    spyOn(component, 'increment');
+
+    const button = fixture.debugElement.nativeElement.querySelector('button');
+    button.click();
+    expect(component.increment).toHaveBeenCalled();
   });
 });
