@@ -1,16 +1,19 @@
+const jestPreset = require("jest-preset-angular/jest-preset");
+const { globals } = jestPreset;
+const tsjest = globals["ts-jest"];
+
+const tsjestOverrides = {
+  ...tsjest,
+  tsConfig: "<rootDir>/tsconfig.spec.json",
+};
+const globalOverrides = {
+  ...globals,
+  "ts-jest": { ...tsjestOverrides },
+};
+
 module.exports = {
+  ...jestPreset,
+  globals: { ...globalOverrides },
   preset: "jest-preset-angular",
   setupFilesAfterEnv: ["<rootDir>/test/jest-setup.ts"],
-  globals: {
-    "ts-jest": {
-      tsConfig: "<rootDir>/tsconfig.spec.json",
-      stringifyContentPathRegex: "\\.html$",
-      astTransformers: {
-        before: [
-          "jest-preset-angular/build/InlineFilesTransformer",
-          "jest-preset-angular/build/StripStylesTransformer",
-        ],
-      },
-    },
-  },
 };
