@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CounterComponent } from './counter.component';
+import { By } from '@angular/platform-browser';
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
@@ -53,8 +54,8 @@ describe('CounterComponent', () => {
   it('button click launch increment', () => {
     spyOn(component, 'increment');
 
-    const button = fixture.debugElement.nativeElement.querySelector('button');
-    button.click();
+    const button = fixture.debugElement.query(By.css('button'));
+    button.triggerEventHandler('click', {});
     expect(component.increment).toHaveBeenCalled();
   });
 });
