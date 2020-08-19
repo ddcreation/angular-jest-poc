@@ -1,1 +1,15 @@
-<p>create works!</p>
+<h1>Create fox</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <label for="fox-name">Enter fox name</label><br />
+  <input id="fox-name" type="text" formControlName="name" /><br />
+  <div *ngIf="form.invalid && form.touched" class="errors">
+    <h2>Errors</h2>
+    <ul>
+      <li *ngFor="let error of form.controls.name.errors | keyvalue">
+        {{ error.key }}
+      </li>
+    </ul>
+  </div>
+  <hr />
+  <button type="submit" [disabled]="form.invalid">Add fox</button>
+</form>

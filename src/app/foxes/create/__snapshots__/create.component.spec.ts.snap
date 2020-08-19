@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateComponent should init with empty form 1`] = `
+FormGroup {
+  "_onCollectionChange": [Function],
+  "_onDisabledChange": Array [],
+  "asyncValidator": null,
+  "controls": Object {
+    "name": FormControl {
+      "_onChange": Array [
+        [Function],
+      ],
+      "_onCollectionChange": [Function],
+      "_onDisabledChange": Array [
+        [Function],
+      ],
+      "_parent": [Circular],
+      "_pendingValue": "",
+      "asyncValidator": null,
+      "errors": Object {
+        "required": true,
+      },
+      "pristine": true,
+      "status": "INVALID",
+      "statusChanges": EventEmitter {
+        "__isAsync": false,
+        "_isScalar": false,
+        "closed": false,
+        "hasError": false,
+        "isStopped": false,
+        "observers": Array [],
+        "thrownError": null,
+      },
+      "touched": false,
+      "validator": [Function],
+      "value": "",
+      "valueChanges": EventEmitter {
+        "__isAsync": false,
+        "_isScalar": false,
+        "closed": false,
+        "hasError": false,
+        "isStopped": false,
+        "observers": Array [],
+        "thrownError": null,
+      },
+    },
+  },
+  "errors": null,
+  "pristine": true,
+  "status": "INVALID",
+  "statusChanges": EventEmitter {
+    "__isAsync": false,
+    "_isScalar": false,
+    "closed": false,
+    "hasError": false,
+    "isStopped": false,
+    "observers": Array [],
+    "thrownError": null,
+  },
+  "touched": false,
+  "validator": null,
+  "value": Object {
+    "name": "",
+  },
+  "valueChanges": EventEmitter {
+    "__isAsync": false,
+    "_isScalar": false,
+    "closed": false,
+    "hasError": false,
+    "isStopped": false,
+    "observers": Array [],
+    "thrownError": null,
+  },
+}
+`;

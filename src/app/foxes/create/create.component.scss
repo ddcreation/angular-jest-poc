@@ -1,0 +1,22 @@
+form {
+  label {
+    font-size: 1.5rem;
+    color: lightsalmon;
+  }
+
+  input {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.errors {
+  color: red;
+}
