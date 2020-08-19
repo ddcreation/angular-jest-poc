@@ -3,15 +3,15 @@
 <p>What do you want to do next with your app?</p>
 
 <div class="card-container">
-  <a class="card card-small" href="/counter" tabindex="0">
+  <a class="card card-small" [routerLink]="['/', 'counter']" tabindex="0">
     <span>Counter test</span>
   </a>
 
-  <a class="card card-small" href="/fox/create">
+  <a class="card card-small" [routerLink]="['/', 'foxes', 'create']">
     <span>Create fox</span>
   </a>
 
-  <a class="card card-small" href="/fox/list">
+  <a class="card card-small" [routerLink]="['/', 'foxes']">
     <span>List foxes</span>
   </a>
 </div>
