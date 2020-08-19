@@ -14,11 +14,10 @@ describe('FoxesService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('initial empty state', () => {
-    expect(service.foxes.length).toBe(0);
-  });
-
   it('should add fox', () => {
+    // initial empty state
+    expect(service.foxes.length).toBe(0);
+
     const newFoxName = 'testFox';
     const addedFox = service.add(newFoxName);
 
@@ -37,5 +36,20 @@ describe('FoxesService', () => {
 
     // In property:
     expect(service.foxes[0]).toEqual(sampleFox);
+  });
+
+  it('should reset foxes', () => {
+    service.add('Fox 1');
+    service.add('Fox 2');
+
+    service.reset();
+    expect(service.foxes.length).toBe(0);
+  });
+
+  it('list should return observable', (done) => {
+    service.list().subscribe((result) => {
+      expect(result).toEqual([]);
+      done();
+    });
   });
 });
