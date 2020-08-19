@@ -47,7 +47,7 @@ describe('FoxesService', () => {
   });
 
   it('list should return observable', (done) => {
-    service.list().subscribe((result) => {
+    service.list$().subscribe((result) => {
       expect(result).toEqual([]);
       done();
     });

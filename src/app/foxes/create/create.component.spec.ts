@@ -121,9 +121,6 @@ describe('CreateComponent', () => {
   });
 
   it('should add fox and redirect on valid submit', () => {
-    // spyOn(mockFoxes, 'add');
-    // spyOn(mockRouter, 'navigate');
-
     // Invalid form: no redirect
     component.onSubmit();
     expect(mockFoxes.add.mock.calls.length).toBe(0);

@@ -1,1 +1,8 @@
-<p>list works!</p>
+<h1>List of foxes</h1>
+<div class="foxesList" *ngIf="foxes && foxes.length">
+  <ul>
+    <li *ngFor="let fox of foxes">{{ fox.name }}</li>
+  </ul>
+  <button (click)="resetFoxesList()">Reset</button>
+</div>
+<p class="comment" *ngIf="!foxes || foxes.length === 0">No foxes at all...</p>

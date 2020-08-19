@@ -26,7 +26,7 @@ export class FoxesService {
     return newFox;
   }
 
-  public list(): Observable<Fox[]> {
+  public list$(): Observable<Fox[]> {
     return this._foxes$;
   }
 
