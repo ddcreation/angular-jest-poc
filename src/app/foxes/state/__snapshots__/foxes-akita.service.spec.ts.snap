@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FoxesAkitaService should add a fox 1`] = `
+Object {
+  "id": Any<Number>,
+  "name": "New fox",
+}
+`;
+
+exports[`FoxesAkitaService should have empty initial state: initialState 1`] = `
+Object {
+  "entities": Object {},
+  "error": null,
+  "ids": Array [],
+  "loading": true,
+}
+`;
+
+exports[`FoxesAkitaService should reset: initialState 1`] = `
+Object {
+  "entities": Object {},
+  "error": null,
+  "ids": Array [],
+  "loading": true,
+}
+`;
